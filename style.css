@@ -1,0 +1,15 @@
+body {
+    background-color: grey;
+    color: black;
+    font-family: calibri;
+    font-size: 20pt;
+    background-size: 100%;
+}
+
+body:hover {
+    background-color: grey;
+    color: blue;
+    font-family: arial;
+    font-size: 18pt;
+    background-size: 100%;
+}

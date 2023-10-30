@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validation</title>
+</head>
+<body>
+	<label for="pass1">First password: </label>
+    	<input type="text" id="pass1" name="pass1">
+    	<br>
+    	<label for="pass2">Second password:</label>
+    	<input type="text" id="pass2" name="pass2">
+    	<br><br>
+    	<button onclick="validate()">Validate passwords</button>
+
+    	<script>
+        	function validate() {
+            	var pass1 = document.getElementById("pass1").value;
+            	var pass2 = document.getElementById("pass2").value;
+
+           	 if (pass1.length >= 8 && pass2.length >= 8) {
+                	if (pass1 === pass2) {
+                    		alert("Passwords match");
+                	} else {
+                    		alert("Passwords do not match");
+                	}
+            	} else {
+                	alert("Password length must be at least 8 characters");
+            	}
+        }
+    	</script>
+</body>
+</html>
+

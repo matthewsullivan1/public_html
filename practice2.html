@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+   	<p id="p1" style="color:black">
+        	Create a web page that has a paragraph with some dummy text. Near the paragraph, have a text field to accept RGB values to form any colors for the paragraph and the border. You also need to control the width of the border.
+    	</p>
+
+    	<label for="rgb">Enter RGB values in format rgb(x,y,z):</label>
+    	<input type="text" id="rgb" name="rgb">
+    	<br><br>
+    	<label for="border">Enter Border Width:</label>
+    	<input type="text" id="border" name="border">
+    	<br><br>
+    	<button onclick="change()">Change Color and Border</button>
+
+    	<script>
+        	function change() {
+            	var color = document.getElementById("rgb").value;
+            	var border = document.getElementById("border").value;
+            	var p1 = document.getElementById("p1");
+
+            	if (color.startsWith("rgb(") && color.endsWith(")")) {
+                	p1.style.color = color;
+                	p1.style.border = border + "px solid " + color;
+            	} else {
+                	alert("invalid input");
+            	}
+        }
+    	</script>
+</body>
+</html>
+
